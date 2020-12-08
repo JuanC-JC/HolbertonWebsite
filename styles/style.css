@@ -1,0 +1,202 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 200%;
+}
+
+html{
+
+    font-size: 62.5%;
+}
+
+/* tiene un maximo de 1100px configurado en la hoja de holberton */
+body{
+    display: flex;
+    font-size: 1.6rem;
+    flex-direction: column;
+}
+
+.cabezera{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    background:linear-gradient(to right,  #FFB747,#FE4D70);
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.cabezera-nav{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left:1rem;
+}
+
+
+.logo{
+    color: white;
+    font-size: 4rem;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li a:hover{
+    color: rgb(42, 173, 190);
+}
+
+.menu li a{
+    font-weight: 600;
+    font-size: 1.45rem;
+    color: white;
+    text-decoration: none;
+}
+
+.buttons-socialmedia{
+    position: absolute;
+    top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    right: 20px;
+}
+
+
+/* BOTON DE FACEBOOKS */
+.fb-share-button{
+    margin-right: 2rem;
+}
+
+/* MAIN DE LA PAGINA */
+main{
+    display: flex;
+    padding: 2rem;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+
+
+.img-intro{
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+.main-content{
+    flex: 2;
+    overflow-y: auto;
+    padding-top: 1rem;
+}
+
+.main-discuss{
+    flex:1;
+    overflow-y: auto;
+    padding-top: 1rem;
+}
+
+
+.test{
+    display: flex;
+    justify-content: center;
+}
+
+.smart{
+    width: 50%;
+}
+
+.algoritmos-interactivos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-algoritmo{
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+
+.img-algoritmo{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50vh;
+    border: 3px solid #2e7fa1;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.img-description{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    margin-top: -1rem;
+    line-height: 100%;
+    background-color: #2a6985;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: white;
+}
+
+
+.img-description:hover{
+    font-size: 110%;
+    background-color: #164255;
+}
+
+.algoritmo-link{
+    color:white;
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+b{
+    font-weight: bold;
+}
+
+
+@media (min-width:800px){
+    .container-algoritmo{
+        width: 45%;
+    }
+
+    .img-algoritmo{
+        height: 25vh;
+    }
+
+    .buttons-socialmedia{
+
+        position: static;
+        justify-content: flex-end;
+        width: 28%;
+    }
+
+
+}
+
+@media (min-width:600px){
+
+    
+    .menu li{
+        margin-left: 2rem;
+    }
+    
+    .cabezera-nav{
+        width: 60%;
+        margin-left: 3rem;
+    }
+
+    .img-description{
+        line-height: 110%;
+        font-size: 1.6rem;
+        padding: 1.2rem;
+    }
+}

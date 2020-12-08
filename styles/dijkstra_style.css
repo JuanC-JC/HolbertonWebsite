@@ -1,0 +1,111 @@
+
+.contenedor-algoritmo{
+    /* background-color: lightcoral; */
+    margin-top: 3rem;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas{
+    width: 73.8%;
+    border: 1px solid;
+}
+
+.botones-algoritmo{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2rem;
+}
+
+
+
+.button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.start:active{
+    width: 60px;
+    height: 60px;
+}
+
+
+.nodo-initial{
+    background-color: #1bc986;
+}
+
+
+.nodo-finish
+{
+    background-color: #df6060;
+}
+
+.nodo-wall
+{   
+    background-color: #003549;
+}
+
+.start
+{   
+    background-color: #561ebe;
+    
+}
+
+
+.pseudocodigo{
+    background-color: #eff1f3;
+    width: 100%;
+}
+
+.sangria{
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.sangria-2
+{
+    padding-left: 2rem;
+}
+
+.sangria-3
+{
+    padding-left: 4rem;
+}
+
+.sangria-4
+{
+    padding-left: 6rem;
+}
+
+.sangria-5{
+    padding-left: 8rem;
+}
+
+.sangria-6{
+    padding-left: 10rem;
+}
+
+
+
+
+@media (min-width:500px){
+
+    .botones-algoritmo{
+        justify-content: center;
+    }
+
+    .button{
+        margin: 10px;
+    }
+}

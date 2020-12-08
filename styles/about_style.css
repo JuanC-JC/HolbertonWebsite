@@ -1,0 +1,13 @@
+.img--personal{
+    width: 50%;
+}
+
+.img-description{
+    width: 50%;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

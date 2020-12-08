@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3587a26af8.js" crossorigin="anonymous"></script>
+
+    <link href="https://www.holbertonschool.com/level2/school.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/dijkstra_style.css">
+
+
+    <title>Algorithm dijkstra</title>
+
+</head>
+
+<body class="works_on_smartphone">
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId=287031825608042&autoLogAppEvents=1" nonce="jFbWJjBf"></script>
+
+
+    <header class="cabezera">
+
+        <div class="logo"><i class="fas fa-robot"></i></div>
+
+        <nav class="cabezera-nav">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dijkstra.html">Interactive</a></li>
+                <li><a href="./tweets.html">Tweets</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="buttons-socialmedia">
+            <div class="fb-share-button" data-href="http://3.89.104.202/dijkstra.html" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F3.89.104.202%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+            class="twitter-share-button" 
+            data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+    </header>
+
+
+    <main>
+        
+        <div class="main-content">
+            <h1>Pathfinder Dijkstra</h1>
+            <div class="contenedor-algoritmo">
+    
+                <canvas width="500" height="500" id="lienzo"></canvas>
+        
+        
+                <div class="pepe"></div>
+        
+                <div class="botones-algoritmo">
+                    <div class="button nodo-initial" id="nodo-initial"><span>initial</span></div>
+                    <div class="button nodo-finish" id="nodo-finish"><span>finish</span></div>
+                    <div class="button nodo-wall" id="nodo-wall"><span>wall</span></div>
+                    <div class="button start" id="start"><span>start</span></div>
+                </div>
+        
+        
+            </div>
+
+            <div class="info-algoritmo">
+
+                
+                <p>
+                    Dijkstra's algorithm, also called minimum path algorithm, is an algorithm for 
+                    determining the shortest path, given an origin vertex, to the rest of the vertices 
+                    in a network that has weights on each edge. Its name refers to Edsger Dijkstra, a 
+                    computer scientist from the Netherlands who conceived it in 1956 and first published 
+                    it in 1959.
+                </p>
+
+                <h3>Pseudocode</h3>
+                <div class="pseudocodigo">
+                    <p class="sangria sangria">
+                        <b>function</b> <b>Dijkstra</b> (Graph <b>G</b>, output node <b>s</b>)
+                    </p>
+
+                    <p class="sangria sangria-2">
+                        // We will use a vector to store the distances from the output node to the rest
+                        whole distance [n] 
+                    </p>
+
+                    <p class="sangria sangria-2">
+                        //Initialize the vector with initial distances
+                        Boolean seen [n] 
+                    </p>
+                    <p class="sangria sangria-2">
+                        //Boleans vector to control the vertices from which we already have the minimum distance</p>
+                    <p class="sangria sangria-2">
+                        <b>for each</b> w ∈ V[G] <b>do</b>
+                    </p>
+
+                    <p class="sangria sangria-3"><b>If</b> (no edge between s and w) <b>Then</b></p>
+
+                    <p class="sangria sangria-4">distance[w] = Infinit //you can check the box with a -1 for example</p>
+
+                    <p class="sangria sangria-3"><b>If Not</b></p>
+      
+                    <p class="sangria sangria-4"> distance[w] = Weight (s, w)</p>
+
+                    <p class="sangria sangria-3"> <b>end if</b> </p>
+
+                    <p class="sangria sangria-2"><b>end for</b></p>
+                    
+                    <p class="sangria sangria-2">distance[s] = 0</p>
+
+                    <p class="sangria sangria-2">visited[s] = true</p>
+
+                    <p class="sangria sangria-2">//n is the number of vertices that the graph has</p>
+
+                    <p class="sangria sangria-2"><b>While</b> (not all nodes are visited) <b>do</b> </p>
+
+                    <p class="sangria sangria-3"><b>while</b> (not_seen_all)  <b>do</b> </p>
+
+                    <p class="sangria sangria-4">vertex = tomar_el_mínimo_del_vector distancia y que no esté visto;</p>
+
+                    <p class="sangria sangria-4">visited[vertex] = true;</p>
+                    
+                    <p class="sangria sangria-4"><b>for each</b> w ∈ successor (G, vertex) <b>do</b></p>
+                       
+                    <p class="sangria sangria-5"><b>if</b> distance[w]&gt;distance[vertex]+weight (vertex, w) <b>then</b></p>
+                        
+                    <p class="sangria sangria-6">distance[w] = distance[vertex]+weight (vertex, w)</p>
+                    
+                    <p class="sangria sangria-5"><b>end if</b></p>
+                    
+                    <p class="sangria sangria-4"><b>end for</b> </p>
+                    
+                    <p class="sangria sangria-3"><b>end while</b></p>
+                    
+                    <p class="sangria sangria-2"><b>end function</b>.</p>
+
+                    
+                </div>
+            </div>
+
+        </div>
+
+        
+        <aside class="main-discuss">
+            <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                    var disqus_config = function () {
+                    this.page.url = "http://3.89.104.202/"
+                    };
+
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://holberton-gbvyulci4x.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </aside>
+
+    </main>
+    
+
+
+    <script src="./scripts/clases.js"></script>
+    <script src="./scripts/dijkstra.js"></script>
+
+
+    <footer>Made by Juan camilo Ibañez chaparro for <a href="https://www.holbertonschool.com" target="_blank">Holberton School</a></footer>
+
+
+</body>
+
+</html>
